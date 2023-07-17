@@ -1,10 +1,20 @@
 import "./App.css";
-import { Button, ButtonGroup, useColorMode } from "@chakra-ui/react";
+import { useColorMode, Grid, GridItem, Show } from "@chakra-ui/react";
 
 function App() {
-  const { colorMode, toggleColorMode } = useColorMode();
   return (
-    <Button onClick={toggleColorMode}>Toggle {colorMode === "light" ? "dark" : "light"}</Button>
+    <Grid
+      templateAreas={{
+        base: `"nav" "main"`,
+        lg: `"nav nav" "aside main"`, // 1024 px
+      }}
+    >
+      <GridItem area="nav" bg="coral">Nav</GridItem>
+      <Show above="lg">
+        <GridItem area="aside" bg="gold">Aside</GridItem>
+      </Show>
+      <GridItem area="main" bg="dodgerBlue">Main</GridItem>
+    </Grid>
   );
 }
 
