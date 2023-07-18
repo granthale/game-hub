@@ -3,7 +3,7 @@ import GameCard from "./GameCard";
 import useGames from "../hooks/useGames";
 
 const GameGrid = () => {
-  const { games, error, setGames, setError } = useGames();
+  const { games, error } = useGames();
 
   return (
     <>
