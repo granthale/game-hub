@@ -6,7 +6,7 @@ export interface Platform {
     slug: string;
 }
 
-const usePlatforms = () => {
+    const usePlatforms = (selectedPlatform: Platform | null) => {
     const {data:platforms, error, isLoading} = useData<Platform>('/platforms/lists/parents')
 
     return {platforms, error, isLoading};
