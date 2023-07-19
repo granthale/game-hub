@@ -20,7 +20,7 @@ const GameCard = ({ game }: Props) => {
     <Card>
       <Image src={getCroppedImgUrl(game.background_image)} alt={game.name} />
       <CardBody>
-        <HStack marginY={2} spacing={3} justifyContent="space-between">
+        <HStack marginBottom={2} justifyContent="space-between">
           <PlatformIconList
             platforms={game.parent_platforms.map((p) => p.platform)}
           ></PlatformIconList>
