@@ -1,4 +1,5 @@
 import useData from "./useData";
+import { Game } from "./useGames";
 
 export interface Genre {
     id: number;
